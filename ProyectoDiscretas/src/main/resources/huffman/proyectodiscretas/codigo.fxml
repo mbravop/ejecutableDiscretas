@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="huffman.proyectodiscretas.CodigoController">
+   <children>
+      <VBox layoutX="-2.0" prefHeight="641.0" prefWidth="205.0" spacing="10.0" style="-fx-background-color: #267a3c;">
+         <children>
+            <Pane prefHeight="179.0" prefWidth="205.0">
+               <children>
+                  <Text layoutX="59.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Integrantes:">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="• Mauricio Bravo">
+                     <font>
+                        <Font name="Avenir Next Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="• Dereck Santander">
+                     <font>
+                        <Font name="Avenir Next Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="• Jeremy Poveda">
+                     <font>
+                        <Font name="Avenir Next Bold" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="14.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="• Carlos Salazar">
+                     <font>
+                        <Font name="Avenir Next Bold" size="17.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToExplicacion" prefHeight="80.0" prefWidth="205.0" stylesheets="@estilos/estilos.css" text="¿En qué consiste?" textFill="WHITE">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToFuncionamiento" prefHeight="80.0" prefWidth="205.0" stylesheets="@estilos/estilos.css" text="Funcionamiento del algoritmo" textFill="WHITE" wrapText="true">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToGenerarNuevo" prefHeight="80.0" prefWidth="205.0" stylesheets="@estilos/estilos.css" text="Hazlo tú mismo" textFill="WHITE">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToArbol" prefHeight="80.0" prefWidth="205.0" stylesheets="@estilos/estilos.css" text="Árbol realizado" textFill="WHITE">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" disable="true" mnemonicParsing="false" onAction="#switchToVerCodigo" prefHeight="80.0" prefWidth="205.0" stylesheets="@estilos/estilos.css" text="Generar código" textFill="WHITE">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Pane layoutX="201.0" layoutY="1.0" prefHeight="638.0" prefWidth="799.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#263a7a" height="71.0" layoutY="25.0" stroke="#263a7a" strokeType="INSIDE" width="798.0" />
+            <Label fx:id="lblNombreBeneficiario" layoutX="85.0" layoutY="20.0" prefHeight="83.0" prefWidth="622.0" text="Proyecto Matemáticas Discretas" textFill="WHITE">
+               <font>
+                  <Font name="Lucida Grande" size="40.0" />
+               </font>
+            </Label>
+            <Text layoutX="179.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingresa el texto que deseas codificar:">
+               <font>
+                  <Font name="Calibri Bold" size="28.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtTextoCodificar" alignment="TOP_LEFT" layoutX="141.0" layoutY="222.0" prefHeight="95.0" prefWidth="526.0" promptText="Ingresa tu texto aquí..." />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#263a7a" height="52.0" layoutX="296.0" layoutY="338.0" onMouseClicked="#generarCodificacion" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+            <Text fill="WHITE" layoutX="355.0" layoutY="370.0" onMouseClicked="#generarCodificacion" strokeType="OUTSIDE" strokeWidth="0.0" text="Codificar">
+               <font>
+                  <Font name="Calibri" size="23.0" />
+               </font>
+            </Text>
+            <Label fx:id="lblPresentacionTexto" alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="422.0" prefHeight="32.0" prefWidth="621.0" text="Texto generado a partir de cadena original:" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="28.0" />
+               </font>
+            </Label>
+            <Text fx:id="lbCodigo" fill="#6b6868" layoutX="100.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aquí aparecerá el código del texto..." textAlignment="CENTER" wrappingWidth="604.2262573242188">
+               <font>
+                  <Font name="Calibri Bold" size="25.0" />
+               </font>
+            </Text>
+            <Label fx:id="lbAltura" layoutX="324.0" layoutY="564.0" text="Label">
+               <font>
+                  <Font name="Calibri Bold" size="28.0" />
+               </font>
+            </Label>
+            <Text layoutX="65.0" layoutY="588.0" strokeType="OUTSIDE" strokeWidth="0.0" text="La altura del árbol es:">
+               <font>
+                  <Font name="Calibri Bold" size="28.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
